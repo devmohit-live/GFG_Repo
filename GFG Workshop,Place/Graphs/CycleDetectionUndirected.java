@@ -11,7 +11,7 @@ public class CycleDetectionUndirected {
         visited[src] = true;
         for (int v : adj.get(src)) {
             if (visited[v] == false) {
-                visited[v] = true;
+                // visited[v] = true;
                 if (dfsCycle(adj, v, src, visited))
                     return true;
             } else if (v != parent)

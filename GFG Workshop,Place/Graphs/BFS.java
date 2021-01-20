@@ -4,9 +4,10 @@ public class BFS {
     public static void bfsUtil(ArrayList<ArrayList<Integer>> adj, int src, boolean visited[]) {
         Queue<Integer> q = new ArrayDeque<Integer>();
         q.add(src);
-        visited[src] = true;
         while (!q.isEmpty()) {
             int curr = q.remove(); // r
+            // m*
+            visited[src] = true; // mark*
             // p
             System.out.print(curr + " ");
             // a

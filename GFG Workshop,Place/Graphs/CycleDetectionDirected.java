@@ -5,7 +5,7 @@ public class CycleDetectionDirected {
     public static boolean detectCycle(ArrayList<ArrayList<Integer>> adj, int V, int src, boolean[] visited,
             boolean[] rec) {
         visited[src] = true;
-        rec[src] = true;
+        rec[src] = true; // reprsenst recursion stack containing nodes at particular stage of recursion
 
         for (int n : adj.get(src)) {
             if (visited[n] == false) {
