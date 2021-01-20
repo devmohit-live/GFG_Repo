@@ -2,7 +2,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class OtherImplemetation {
-
+    /**
+     * For Weighted graph we use Edge(src,des,wt ) rep instead of just Edge(v,wt)
+     */
     static class Edge {
         int src;
         int des;
