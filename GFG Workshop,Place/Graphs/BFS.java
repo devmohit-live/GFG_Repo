@@ -55,6 +55,7 @@ public class BFS {
                 System.out.println();
             }
         }
+
         System.out.println("Connected components are: " + connected);
     }
 }

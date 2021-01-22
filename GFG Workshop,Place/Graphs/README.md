@@ -26,7 +26,7 @@
    3. [ ] Shotest Path in DAG
 7. MST:
    1. [x] Prims
-   2. [ ] Kruskal
+   2. [x] Kruskal
 8. Single Sourse Shotest Path:
    1. [ ] Dijkstras
    2. [x] Bellman Ford
