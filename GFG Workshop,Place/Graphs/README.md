@@ -29,11 +29,11 @@
    2. [ ] Kruskal
 8. Single Sourse Shotest Path:
    1. [ ] Dijkstras
-   2. [ ] Bellman Ford
+   2. [x] Bellman Ford
 9. Strongly Connected Components
    1. [ ] Articulation Point/Cut Vertces (Undirected)
    2. [ ] Bridges in Graph (for Undirected Graph)
-   3. [ ] Kosaraju's Algo (Directed)
+   3. [x] Kosaraju's Algo (Directed)
    4. [ ] Tarjan's Algo (Directed Graph With/without Cross Edges)
 
 ## Questions:

@@ -43,8 +43,9 @@ public class BellmanFord {
             }
         }
 
-        // detecting negative weight cycle: if we run the loop once again and we found
-        // that the distance somewhere os decreased then there exists negative cycle
+        // detecting negative weight cycle: if we run the loop once again(Vth time) and
+        // we found
+        // that the distance somewhere is decreasing then there exists negative cycle
         for (Edge e : edges) {
             if (distance[e.nbr] > distance[e.src] + e.wt) {
                 System.out.println("Graph contains negative weight cycle");
