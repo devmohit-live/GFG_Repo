@@ -34,6 +34,7 @@ public class BellmanFord {
             }
         }
 
+        // O(VE) (complexity != V+E as there is no use of visited array)
         // we obtaind the shortest path in V-1 repeation only
         for (int i = 0; i < V - 1; i++) { // ruuning loop V-1 times
             for (Edge e : edges) {
@@ -91,4 +92,5 @@ public class BellmanFord {
     }
 }
 
-// Pair[]
+// Time: O(VE)
+// Space: O(V)+O(E) =>O(E)==O(V) which ever is greater

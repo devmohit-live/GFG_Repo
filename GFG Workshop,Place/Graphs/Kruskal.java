@@ -6,8 +6,10 @@ import java.util.Scanner;
  * @author devmohit-live
  * 
  *         Greedy Algo: Steps: 1: Sort the edges in increasing order of their
- *         weight 2: Traverse through these edges : 3: if adding the particular
- *         edge causes cycle then ignore it else add it to mst and res+=e.wt
+ *         weight
+ * 
+ *         2: Traverse through these edges : 3: if adding the particular edge
+ *         causes cycle then ignore it else add it to mst and res+=e.wt
  */
 
 public class Kruskal {
@@ -35,6 +37,13 @@ public class Kruskal {
 
     }
 
+    /**
+     * Find and Union takes amortize O(1) time -> constact as they are implemeted
+     * using Rank and Path Compression even if we don't do path compression =>
+     * parent[x]=find(parent[x],parent) we would be having O(logn), here we have
+     * implemeted path compression too so we have constant time operation
+     */
+
     static int find(int[] parent, int x) {
         if (x == parent[x])
             return x;
@@ -57,26 +66,30 @@ public class Kruskal {
         // initalizing for disjoint set for cycle detection in edges
         int parent[] = new int[V];
         int rank[] = new int[V]; // here we maintained rank for each node initally 0
+
+        // O(V)
         for (int i = 0; i < parent.length; i++) {
             parent[i] = i; // initally everyone is parent of themself
         }
 
-        // Sorting edges
+        // Sorting edges --> O(ElogE)
         Arrays.sort(edges);
 
         Edge[] op = new Edge[V - 1]; // MST contains V-1 Edges
         int cost = 0, count = 0;
+
+        // O(E)
         for (Edge e : edges) {
             if (count == V - 1)
                 break;
-
+            // constant time operation
             int repx = find(parent, e.src);
             int repy = find(parent, e.nbr);
             if (repx != repy) {
                 cost += e.wt;
                 op[count] = e;
                 count++;
-                uniounByRank(repx, repy, parent, rank);
+                uniounByRank(repx, repy, parent, rank); // comstant time operation
             }
         }
 
@@ -95,9 +108,6 @@ public class Kruskal {
         int E = sc.nextInt();
         // ArrayList<ArrayList<Edge>> adj = new ArrayList<>();
         Edge[] edges = new Edge[E];
-        // for (int i = 0; i < V; i++) {
-        // adj.add(new ArrayList<Edge>());
-        // }
         // no use of adj list here
         for (int i = 0; i < E; i++) {
             edges[i] = new Edge(sc.nextInt(), sc.nextInt(), sc.nextInt());
@@ -109,4 +119,11 @@ public class Kruskal {
 
 /**
  * Inp: 5 7 0 1 6 0 2 5 1 3 8 1 2 3 2 4 12 3 4 10 2 3 7
+ * 
+ * //O(ElogE) + O(V)+ O(EaphaV -> E) => O(ElogE) === O(ElogV)
+ * 
+ * //without using path compression: //O(ElogE) + O(V)+ O(ElogV) => O(E(logV +
+ * logE))
+ * 
+ * // Space: O(E)+O(V) => O(E)==O(V)
  */
