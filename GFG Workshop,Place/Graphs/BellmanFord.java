@@ -38,8 +38,10 @@ public class BellmanFord {
         // we obtaind the shortest path in V-1 repeation only
         for (int i = 0; i < V - 1; i++) { // ruuning loop V-1 times
             for (Edge e : edges) {
-                if (distance[e.nbr] > distance[e.src] + e.wt) {
-                    distance[e.nbr] = distance[e.src] + e.wt;
+                if (e.nbr != src) { // v!=original source
+                    if (distance[e.nbr] > distance[e.src] + e.wt) {
+                        distance[e.nbr] = distance[e.src] + e.wt;
+                    }
                 }
             }
         }

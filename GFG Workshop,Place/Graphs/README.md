@@ -23,7 +23,7 @@
 6. Shorest Path
    1. [ ] Shotest Path in Undirected(in terms of Edges)
    2. [ ] Shotest Path in Undirected(in terms of Weight)
-   3. [ ] Shotest Path in DAG
+   3. [x] Shotest Path in DAG
 7. MST:
    1. [x] Prims
    2. [x] Kruskal
