@@ -16,10 +16,10 @@
    1. Undirected:
       1. [x] Using DFS
       2. [ ] Using BFS
+      3. [ ] Using Disjoint Set
    2. Directed:
       1. [x] Using DFS
       2. [x] Using BFS (Kahn's Algo Modified)
-      3. [ ] Using Disjoint Set
 6. Shorest Path
    1. [ ] Shotest Path in Undirected(in terms of Edges)
    2. [ ] Shotest Path in Undirected(in terms of Weight)

@@ -1,6 +1,13 @@
 // Java program to find minimum time required
 // to burn the binary tree completely
-
+/**
+ * The height is calculated in terms of nodes but the root node is counted only
+ * once not for both(left subtree and right subtree) the answer required was =>
+ * lh + rh +1 (in terms of node height)
+ * 
+ * Approach: calculate lh,rh in terms of edges(root node isn't counted in
+ * anyone) add 2 => +1 form root node , extra one req by ans
+ */
 public class Tried_BurinigTree {
 
     // Tree Node
