@@ -1,5 +1,4 @@
-// Java program to find minimum time required
-// to burn the binary tree completely
+// Link : https://www.geeksforgeeks.org/minimum-time-to-burn-a-tree-starting-from-a-leaf-node/
 /**
  * The height is calculated in terms of nodes but the root node is counted only
  * once not for both(left subtree and right subtree) the answer required was =>
