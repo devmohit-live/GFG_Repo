@@ -28,7 +28,7 @@
    1. [x] Prims
    2. [x] Kruskal
 8. Single Sourse Shotest Path:
-   1. [ ] Dijkstras
+   1. [x] Dijkstras
    2. [x] Bellman Ford
 9. Strongly Connected Components
    1. [ ] Articulation Point/Cut Vertces (Undirected)
@@ -38,4 +38,4 @@
 
 ## Questions:
 
-- More Questions Using Edge Structure: [Follow Here](https://github.com/devmohit-live/Prep/tree/master/Graph)
+- More Questions Using Edge Structure: [Follow Here](https://github.com/devmohit-live/Prep/tree/master/Level1/Graph)

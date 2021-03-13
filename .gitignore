@@ -3,7 +3,7 @@
 # Temp Output Files
 */op.*
 op.*
-op
+op.txt
 
 ## Java Files
 *.class
